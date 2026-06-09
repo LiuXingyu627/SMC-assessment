@@ -1,0 +1,34 @@
+Field,Data Type,Source,Description
+STUDENT_KEY,string,Original,Anonymized unique student identifier.
+SFRSTCA_TERM_CODE,integer,Original,"Academic term code (e.g., 202620)."
+SFRSTCA_CRN,integer,Original,Course Reference Number — unique section ID within a term.
+Course,string,Cleaned,"Standardized course label (uppercase, trimmed). Example: ENGL 103."
+Subject,string,Derived,Subject code parsed from Course (text before first space).
+Course_Number,string,Derived,Course number parsed from Course (text after first space).
+SFRSTCA_CREDIT_HR,float,Original,Credit hours that count toward the student record for this registration.
+SFRSTCA_BILL_HR,float,Original,Credit hours billed for this registration.
+TOTAL_TERM_CREDITS,float,Original,Total credits the student registered for in the term.
+STVMAJR_DESC,string,Original,Student major or program description.
+STVSTYP_DESC,string,Original,"Student type (e.g., Returning Student, High School Guest)."
+STVETHN_DESC,string,Original,Student ethnicity description.
+SSBSECT_INSM_CODE,string,Original,"Raw instructional method code from the section system (e.g., REGR, ASY, HYBR)."
+SSBSECT_ENRL,integer,Original,Current enrollment count for the section.
+SSBSECT_MAX_ENRL,integer,Original,Maximum seat capacity for the section.
+Fill_Rate,float,Derived,Section utilization: SSBSECT_ENRL ÷ SSBSECT_MAX_ENRL. NaN if max enrollment is 0.
+SHRTCKG_GRDE_CODE_FINAL,string,Cleaned,"Final grade code. Missing values replaced with ""Unknown""."
+grade_update,string,Cleaned,"Standardized grade code; invalid codes (AH, A-H, NP, NG) mapped to valid values."
+GATEWAY_FLAG,integer (0/1),Original,1 = gateway course; 0 = not a gateway course.
+ATTEMPT_NUMBER,integer,Original,Student attempt number for this course.
+FACULTY_STATUS,string,Original,Faculty employment status for the section instructor.
+HAS_AID_FLAG,integer (0/1),Original,1 = student receives financial aid; 0 = no aid.
+HAS_PELL_FLAG,integer (0/1),Original,1 = student receives Pell grant; 0 = no Pell.
+INSTRUCTIONAL_MODE,string,Cleaned,"Standardized delivery mode: Regular, Online, or Hybrid. Mapped from SSBSECT_INSM_CODE when inconsistent."
+ENROLLED_BEFORE_START_DATE,integer (0/1),Original,1 = enrolled before term start date; 0 = otherwise.
+full_time_flag,integer (0/1),Original,1 = full-time student by institutional definition; 0 = part-time.
+START_COUNT,integer,Original,Section enrollment count at the start of the term.
+ADD_DROP_COUNT,integer,Original,Number of add/drop transactions for the section during the term.
+NO_SHOW_FLAG,integer (0/1),Original,1 = student no-showed; 0 = attended/unknown.
+FIRST_TIME_FLAG,integer (0/1),Original,1 = first-time student; 0 = returning.
+high_credit_load_flag,integer (0/1),Derived,1 = TOTAL_TERM_CREDITS above the 99th percentile; flags unusually heavy loads.
+over_capacity_flag,integer (0/1),Derived,1 = SSBSECT_ENRL exceeds SSBSECT_MAX_ENRL; section is over capacity.
+grade_missing_flag,integer (0/1),Derived,"1 = final grade is missing or ""Unknown""; 0 = valid grade present."

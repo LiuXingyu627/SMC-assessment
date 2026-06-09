@@ -1,0 +1,157 @@
+---
+title: Southwestern Michigan College Internship Technical Assessment
+---
+
+## Provide a summary of the dataset.
+
+Include:
+
+1.  Number of records
+
+2.  Number of variables
+
+3.  Variable Types
+
+4.  Missing value counts
+
+5.  Descriptive Statistics for numeric variables
+
+```{r}
+
+```
+
+## Data Quality Issues
+
+Identify at least five data quality issues found in the dataset. Describe the issues, explain why its a problem, and recommend a solution.
+
+```{r}
+
+```
+
+## Duplicate and Integrity Checks
+
+Determine if any duplicate records exists. Document your code and findings.
+
+```{r}
+
+```
+
+## Cleaning Strategy
+
+Describe what methods you would take to clean this dataset so it can be used for reporting and analytics.
+
+```{r}
+
+```
+
+## Build a Cleaning Pipeline
+
+1)  Create code that transform this raw data into analysis-ready dataset.
+2)  Should be able to be reused if another spreadsheet with the same columns is uploaded.
+3)  Include a step splitting Course into a Subject and a Course Number field.
+
+```{r}
+
+```
+
+## What Else?
+
+Are there any features that you believe could be helpful if they were included? Explain your answers.
+
+```{r}
+
+```
+
+## If you are only interested in Internship 2 please skip to 'Create a Data Dictionary'. If not continue working through the notebook.
+
+## Exploratory Analysis
+
+Provide your own analysis of the dataset. Show charts that may be helpful to explain the dataset.
+
+Answer questions such as:
+
+1)  Which courses are consistently filled?
+2)  Which courses are under filled?
+3)  Which instructional mode has the most students?
+4)  Which student populations drive enrollment?
+
+```{r}
+
+```
+
+## DFW Analysis
+
+How does the DFW rate vary across:
+
+1)  Courses
+2)  Gateway Courses
+3)  Instructional Mode
+4)  Student Type
+
+```{r}
+
+```
+
+## Enrollment Drivers
+
+What factors appear to be more important in explaining course enrollment? Show how you got your answers.
+
+```{r}
+
+```
+
+## Build an Enrollment Planning Framework
+
+Develop a methodology that Senior Leadership could use to determine the appropriate number of seats to offer for a course
+
+```{r}
+
+```
+
+## Scenario Analysis
+
+Evaluate these 2 Scenarios:
+
+**Scenario A** Increase average section capacity by 10% What happens? Does this make sense for all courses?
+
+**Scenario B** Reduce sections with fill rates below 50% What happens? What problems could this create?
+
+```{r}
+
+```
+
+## Executive Recommendation
+
+Prepare a summary for Senior Leadership
+
+Address:
+
+1.  Key findings
+
+2.  Recommend planning framework
+
+3.  Important assumptions
+
+4.  Risks and limitations
+
+5.  Future data needed/Data that would help predict more
+
+```{r}
+
+```
+
+## Create a Data Dictionary
+
+Create documentation describing each field used in your cleaned dataset.
+
+```{r}
+
+```
+
+## Recommendations
+
+What fixes would you suggest to prevent future data quality issues at the source?
+
+```{r}
+
+```
